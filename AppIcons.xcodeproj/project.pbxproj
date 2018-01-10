@@ -12,6 +12,10 @@
 		E237DA561FFC729000EE054E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E237DA551FFC729000EE054E /* Assets.xcassets */; };
 		E237DA591FFC729000EE054E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E237DA571FFC729000EE054E /* Main.storyboard */; };
 		E237DA621FFC769500EE054E /* DragImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E237DA611FFC769500EE054E /* DragImageView.swift */; };
+		E2B203F12004503000CE65DA /* NSImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B203F02004503000CE65DA /* NSImage+Ext.swift */; };
+		E2B203F32004506600CE65DA /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B203F22004506600CE65DA /* FileManager+Ext.swift */; };
+		E2B203F52004509500CE65DA /* NSPasteboard+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B203F42004509500CE65DA /* NSPasteboard+Ext.swift */; };
+		E2B203F7200450C200CE65DA /* imageSize.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2B203F6200450C200CE65DA /* imageSize.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		E237DA5A1FFC729000EE054E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E237DA5B1FFC729000EE054E /* AppIcons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppIcons.entitlements; sourceTree = "<group>"; };
 		E237DA611FFC769500EE054E /* DragImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragImageView.swift; sourceTree = "<group>"; };
+		E2B203F02004503000CE65DA /* NSImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Ext.swift"; sourceTree = "<group>"; };
+		E2B203F22004506600CE65DA /* FileManager+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Ext.swift"; sourceTree = "<group>"; };
+		E2B203F42004509500CE65DA /* NSPasteboard+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSPasteboard+Ext.swift"; sourceTree = "<group>"; };
+		E2B203F6200450C200CE65DA /* imageSize.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imageSize.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +66,12 @@
 				E237DA511FFC729000EE054E /* AppDelegate.swift */,
 				E237DA611FFC769500EE054E /* DragImageView.swift */,
 				E237DA531FFC729000EE054E /* ViewController.swift */,
+				E2B203F6200450C200CE65DA /* imageSize.plist */,
 				E237DA551FFC729000EE054E /* Assets.xcassets */,
 				E237DA571FFC729000EE054E /* Main.storyboard */,
+				E2B203F22004506600CE65DA /* FileManager+Ext.swift */,
+				E2B203F42004509500CE65DA /* NSPasteboard+Ext.swift */,
+				E2B203F02004503000CE65DA /* NSImage+Ext.swift */,
 				E237DA5A1FFC729000EE054E /* Info.plist */,
 				E237DA5B1FFC729000EE054E /* AppIcons.entitlements */,
 			);
@@ -99,6 +111,11 @@
 					E237DA4D1FFC729000EE054E = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -126,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E237DA561FFC729000EE054E /* Assets.xcassets in Resources */,
+				E2B203F7200450C200CE65DA /* imageSize.plist in Resources */,
 				E237DA591FFC729000EE054E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B203F32004506600CE65DA /* FileManager+Ext.swift in Sources */,
+				E2B203F52004509500CE65DA /* NSPasteboard+Ext.swift in Sources */,
+				E2B203F12004503000CE65DA /* NSImage+Ext.swift in Sources */,
 				E237DA541FFC729000EE054E /* ViewController.swift in Sources */,
 				E237DA621FFC769500EE054E /* DragImageView.swift in Sources */,
 				E237DA521FFC729000EE054E /* AppDelegate.swift in Sources */,
@@ -267,7 +288,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = AppIcons/AppIcons.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8LP5KW6GHL;
@@ -283,7 +303,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = AppIcons/AppIcons.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 8LP5KW6GHL;
