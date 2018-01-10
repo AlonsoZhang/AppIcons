@@ -68,7 +68,7 @@ class ViewController: NSViewController {
         }
         
         //清除目录,防止以前存在垃圾文件
-        fm.clearAllFilesAtPath(path: imageFolerPath) 
+        fm.clearAllFilesAtPath(path: imageFolerPath)
         
         let largeImage = NSImage(contentsOfFile: self.largeImagePath!)
         
