@@ -21,7 +21,7 @@ class DragImageView: NSImageView {
     }
     
     func dropAreaFadeOut() {
-        self.alphaValue = 0.2
+        self.alphaValue = 0.3
     }
     
     override func draw(_ dirtyRect: NSRect) {
@@ -42,6 +42,7 @@ class DragImageView: NSImageView {
         if (highlight == false) {
             highlight = true
             self.needsDisplay = true
+            self.dropAreaFadeOut()
         }
         let sourceDragMask = sender.draggingSourceOperationMask()
         let pboard = sender.draggingPasteboard()
@@ -63,6 +64,7 @@ class DragImageView: NSImageView {
     
     override func draggingExited(_ sender: NSDraggingInfo?) {
         highlight = false
+        self.dropAreaFadeIn()
         self.needsDisplay = true
     }
     
@@ -76,6 +78,7 @@ class DragImageView: NSImageView {
                 if let delegate = self.delegate {
                     highlight = false
                     self.needsDisplay = true
+                    self.dropAreaFadeIn()
                     delegate.didFinishDragWithFile(files)
                 }
             }

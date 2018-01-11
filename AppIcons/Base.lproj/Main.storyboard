@@ -684,11 +684,12 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="AppIcons" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" closable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="300" height="300"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="300" height="300"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -706,51 +707,31 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="AppIcons" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eym-R3-9hG" customClass="DragImageView" customModule="AppIcons" customModuleProvider="target">
-                                <rect key="frame" x="170" y="75" width="182" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="MX5-OA-mHP"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eym-R3-9hG" customClass="DragImageView" customModule="AppIcons" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Drag" id="MX5-OA-mHP"/>
                             </imageView>
-                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yQp-jC-nuJ">
-                                <rect key="frame" x="206" y="63" width="99" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="TeF-6c-9lx">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <objectValues>
-                                        <string>iPhone</string>
-                                        <string>iPad</string>
-                                        <string>iPhone+iPad</string>
-                                        <string>macOS</string>
-                                    </objectValues>
-                                </comboBoxCell>
-                            </comboBox>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9it-Xi-Q5m">
-                                <rect key="frame" x="28" y="57" width="80" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Export" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SJL-B3-nj5">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="makeAppIconAction:" target="XfG-lQ-9wD" id="MdT-On-pXl"/>
-                                </connections>
-                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="eym-R3-9hG" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="3jy-Y0-P6J"/>
+                            <constraint firstAttribute="trailing" secondItem="eym-R3-9hG" secondAttribute="trailing" id="4CH-ES-SuA"/>
+                            <constraint firstItem="eym-R3-9hG" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="75r-sx-lDt"/>
+                            <constraint firstAttribute="bottom" secondItem="eym-R3-9hG" secondAttribute="bottom" id="8S6-uf-Hyv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="dragView" destination="eym-R3-9hG" id="Rnp-zm-Zyx"/>
-                        <outlet property="exportButton" destination="9it-Xi-Q5m" id="zCE-vU-Noy"/>
-                        <outlet property="typeComboBox" destination="yQp-jC-nuJ" id="86a-4r-aHJ"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="675"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Drag" width="300" height="300"/>
+    </resources>
 </document>

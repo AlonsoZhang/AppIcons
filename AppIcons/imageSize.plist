@@ -2,11 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>iPhone</key>
+	<key>iphone</key>
 	<dict>
+		<key>20</key>
+		<array>
+			<integer>2</integer>
+			<integer>3</integer>
+		</array>
 		<key>29</key>
 		<array>
-			<integer>1</integer>
 			<integer>2</integer>
 			<integer>3</integer>
 		</array>
@@ -14,11 +18,6 @@
 		<array>
 			<integer>2</integer>
 			<integer>3</integer>
-		</array>
-		<key>57</key>
-		<array>
-			<integer>1</integer>
-			<integer>2</integer>
 		</array>
 		<key>60</key>
 		<array>
@@ -26,24 +25,19 @@
 			<integer>3</integer>
 		</array>
 	</dict>
-	<key>iPad</key>
+	<key>ipad</key>
 	<dict>
+		<key>20</key>
+		<array>
+			<integer>1</integer>
+			<integer>2</integer>
+		</array>
 		<key>29</key>
 		<array>
 			<integer>1</integer>
 			<integer>2</integer>
 		</array>
 		<key>40</key>
-		<array>
-			<integer>1</integer>
-			<integer>2</integer>
-		</array>
-		<key>50</key>
-		<array>
-			<integer>1</integer>
-			<integer>2</integer>
-		</array>
-		<key>72</key>
 		<array>
 			<integer>1</integer>
 			<integer>2</integer>
@@ -53,8 +47,12 @@
 			<integer>1</integer>
 			<integer>2</integer>
 		</array>
+		<key>83.5</key>
+		<array>
+			<integer>2</integer>
+		</array>
 	</dict>
-	<key>macOS</key>
+	<key>mac</key>
 	<dict>
 		<key>16</key>
 		<array>
