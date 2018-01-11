@@ -12,7 +12,6 @@ let  kIPhone: String   = "iPhone"
 let  kIPad: String     = "iPad"
 let  kMacOS: String    = "macOS"
 let  kAppIconFolderName: String      =   "AppIcon.appiconset"
-let  kAppIconContensFileName: String  =  "Contents.json"
 
 public enum AppImageType : Int {
     case iPhone
