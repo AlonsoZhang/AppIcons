@@ -159,7 +159,7 @@ extension ViewController: DragImageZoneDelegate {
             }else{
                 let patharr: Array = self.largeImagePath!.components(separatedBy: "/")
                 if patharr.count > 0 {
-                    if patharr.last!.contains(".png"){
+                    if patharr.last!.contains(".png")||patharr.last!.contains(".ico")||patharr.last!.contains(".icns")||patharr.last!.contains(".jpg"){
                         self.showalert()
                     }else{
                         message = "Icon image format is wrong!!!"
@@ -176,7 +176,7 @@ extension ViewController: DragImageZoneDelegate {
     
     func showalert() {
         let alert = NSAlert()
-        alert.addButton(withTitle: "Cancel")
+        alert.addButton(withTitle: "Quit")
         alert.addButton(withTitle: "iOS")
         alert.addButton(withTitle: "MacOS")
         alert.messageText = "Please Choose your device"
@@ -186,12 +186,11 @@ extension ViewController: DragImageZoneDelegate {
             if returnCode.rawValue == 1001{
                 self.makeAppIconWithType(type:"iOS")
                 self.makeJSONFileWithType(type:"iOS")
-                NSApp.terminate(nil)
             }else if returnCode.rawValue == 1002{
                 self.makeAppIconWithType(type:"MacOS")
                 self.makeJSONFileWithType(type:"MacOS")
-                NSApp.terminate(nil)
             }
+            NSApp.terminate(nil)
         })
     }
     
