@@ -52,6 +52,13 @@
 			<integer>2</integer>
 		</array>
 	</dict>
+	<key>ios-marketing</key>
+	<dict>
+		<key>1024</key>
+		<array>
+			<integer>1</integer>
+		</array>
+	</dict>
 	<key>mac</key>
 	<dict>
 		<key>16</key>

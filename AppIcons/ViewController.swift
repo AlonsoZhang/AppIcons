@@ -57,6 +57,9 @@ class ViewController: NSViewController {
                     else {
                         imageName = "icon_\(imageFlag)_\(size)@\(retion)x.png"
                     }
+                    if size == "1024"{
+                        imageName = "logo.png"
+                    }
                     let imagePath = (imageFolerPath as NSString).appendingPathComponent(imageName)
                     //保存图像
                     image?.saveAtPath(path: imagePath)
@@ -90,6 +93,9 @@ class ViewController: NSViewController {
                     else {
                         imageName = "icon_\(imageFlag)_\(size)@\(retion)x.png"
                     }
+                    if size == "1024"{
+                        imageName = "logo.png"
+                    }
                     var imageInfo = [String:Any]()
                     imageInfo["size"] = "\(size)x\(size)"
                     imageInfo["idiom"] = imageFlag
@@ -122,12 +128,16 @@ class ViewController: NSViewController {
         if type == "iOS" {
             let iPhoneConfig = self.imageScaleConfig?["iphone"]
             let iPadConfig = self.imageScaleConfig?["ipad"]
-            configs = [[
-                "imageSizeConfig":iPhoneConfig!,
-                "imageFlag":"iphone"
+            let iosConfig = self.imageScaleConfig?["ios-marketing"]
+            configs = [
+                ["imageSizeConfig":iPhoneConfig!,
+                        "imageFlag":"iphone"
                 ],
-                       ["imageSizeConfig":iPadConfig!,
+                ["imageSizeConfig":iPadConfig!,
                         "imageFlag":"ipad"
+                ],
+                ["imageSizeConfig":iosConfig!,
+                   "imageFlag":"ios-marketing"
                 ]
             ]
         }else if type == "MacOS" {
